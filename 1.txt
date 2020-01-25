@@ -1,0 +1,24 @@
+n= int (input())
+maxi = 0
+count = 0
+maxc = 0
+A = []
+
+a = input()
+A = a.split()
+for i in A:
+    if (int(i) == maxi):
+        count += 1
+        if (maxc < count):
+            maxc = count
+    elif (int(i) > maxi):
+        count = 1
+        maxi = int(i)
+        maxc=1
+    else:
+        count = 0
+
+print(maxc)
+
+
+ 

@@ -1,0 +1,21 @@
+t=int(input())
+while(t!=0):
+    count1=0
+    count2=0
+    count0=0;
+    n=int(input())
+    i=0
+    c=input()
+    a=[]
+    a=c.split()
+    while(i<n):
+        if(int(a[i])==1):
+            count1+=1
+        elif(int(a[i])==2):
+            count2+=1
+        elif(int(a[i])==0):
+            count0+=1
+        i+=1
+    fans=((count0*(count0-1))/2)+((count1*(count1-1))/2)+((count2*(count2-1))/2);
+    print(int(fans))
+    t-=1

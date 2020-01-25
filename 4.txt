@@ -1,0 +1,8 @@
+n=int(input())
+while(n!=0):
+    n-=1
+    t=int(input())
+    if(t%4==0):
+        print("Chef")
+    else:
+        print("Chefu")
