@@ -1,0 +1,11 @@
+t=input()
+a = list(map(int, input().split()))
+x = max(a)
+c = d = 0
+for b in a:
+    if b == x:
+        c += 1
+    else:
+        c = 0
+    d = max(c, d)
+print(d)

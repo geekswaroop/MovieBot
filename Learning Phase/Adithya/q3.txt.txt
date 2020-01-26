@@ -1,0 +1,12 @@
+t = int(input())
+while t>0:
+    t-=1
+    n = int(input())
+    l = list(map(int, input().split()))
+    zero,two = 0,0
+    for i in l:
+        if i==0:
+            zero+=1 
+        if i==2:
+            two+=1 
+    print(((zero*(zero-1))//2)+((two*(two-1))//2))

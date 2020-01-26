@@ -1,0 +1,5 @@
+t=int(input())
+for i in range(t):
+    n,a,b = map(int,input().split())
+    sum=min(n*a,n//2*b+(n%2)*a)
+    print(sum)

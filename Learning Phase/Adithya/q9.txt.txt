@@ -1,0 +1,28 @@
+lim = 31 
+n,q = map(int, input().split())
+arr = list(map(int, input().split()))
+
+bits = [[0]*(n+1) for _ in range(lim)]
+
+
+def initialize():
+    for i in range(n):
+        x = arr[i]
+        for j in range(lim):
+            mask = 1 << j
+            bits[j][i] += bits[j][i-1]
+            if mask & x:
+                bits[j][i] += 1
+
+initialize()
+#print(bits)
+for _ in range(q):
+    l, r = map(lambda x: int(x)-1, input().split())
+
+    ans = 0
+    nums = r-l+1
+    for i in range(lim):
+        count = bits[i][r] - bits[i][l-1]
+        if count < (nums+1)//2:
+            ans += 1 << i
+    print (ans)
