@@ -1,0 +1,13 @@
+n=int(input())
+s=input()
+t=1
+while(n>0):
+    n=n-t
+    t+=1
+t-=1
+p=0
+a=''
+for i in range (t):
+    p+=i
+    a+=s[p]
+print(a)
